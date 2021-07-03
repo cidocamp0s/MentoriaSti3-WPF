@@ -1,4 +1,4 @@
-﻿<Window x:Class="MentoriaSti3.View.Principal"
+﻿<Window xmlns:UserControls="clr-namespace:MentoriaSti3.View.UserControls"  x:Class="MentoriaSti3.View.Principal"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -9,8 +9,9 @@
     <Grid>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="125">
-            </ColumnDefinition>
+            <ColumnDefinition Width="125"/>
+            <ColumnDefinition/>
+
         </Grid.ColumnDefinitions>
 
         <Grid Background="#FF032338">
@@ -21,6 +22,7 @@
                 <RowDefinition Height="50"/>
                 <RowDefinition />
             </Grid.RowDefinitions>
+
             <Label  Content="Mentoria" 
                     Foreground="White" 
                     HorizontalContentAlignment="Center"
@@ -28,26 +30,35 @@
             <Border Style="{StaticResource BrdMenu}" />
 
             <Button Grid.Row="1" 
+                    x:Name="BtnProdutos"
                     Content="Produtos"
-                   Style="{StaticResource BtnMenu}"
+                    Style="{StaticResource BtnMenu}"
+                    Click="BtnMenu_Click"
                     />
             <Border Grid.Row="1" Style="{StaticResource BrdMenu}" />
 
 
             <Button Grid.Row="2" 
+                    x:Name="BtnClientes"
                     Content="Cliente"
-                   Style="{StaticResource BtnMenu}"
+                    Style="{StaticResource BtnMenu}"
+                    Click="BtnMenu_Click"
                     />
             <Border Grid.Row="2" Style="{StaticResource BrdMenu}" />
 
 
             <Button Grid.Row="3" 
+                    x:Name="BtnPedidos"
                     Content="Pedido"
-                  Style="{StaticResource BtnMenu }"
+                    Style="{StaticResource BtnMenu }"
+                    Click="BtnMenu_Click"
                     />
             <Border Grid.Row="2" Style="{StaticResource BrdMenu}" />
 
         </Grid>
+
+        <ContentControl Grid.Column="1"
+                       x:Name="Conteudo"/>
 
     </Grid>
 </Window>
