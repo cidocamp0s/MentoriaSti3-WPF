@@ -44,8 +44,8 @@ namespace MentoriaSti3.ViewModel
         }
 
 
-        private ObservableCollection<UcProdutoViewModel> _itensAdicionados;
-        public ObservableCollection<UcProdutoViewModel> ItensAdicionados
+        private ObservableCollection<UcPedidoItemViewModel> _itensAdicionados;
+        public ObservableCollection<UcPedidoItemViewModel> ItensAdicionados
         {
             get => _itensAdicionados;
             set
@@ -56,8 +56,8 @@ namespace MentoriaSti3.ViewModel
         }
 
 
-        private decimal _quantidade;        
-        public decimal Quantidade
+        private int _quantidade;        
+        public int Quantidade
         {
             get => _quantidade;
             set

@@ -24,7 +24,7 @@
                 <RowDefinition  />
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            
+
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
@@ -85,7 +85,7 @@
         <Grid Grid.Row="2" Margin="10,0">
             <Grid.RowDefinitions>
                 <RowDefinition/>
-                <RowDefinition Height="60"/>               
+                <RowDefinition Height="60"/>
             </Grid.RowDefinitions>
 
             <ItemsControl Background="white" BorderBrush="Gray" BorderThickness="1" Margin="10"   ItemsSource="{Binding ItensAdicionados}">
@@ -105,13 +105,13 @@
                                 <Run Text="UN" />
                                 <Run Text="X" />
                                 <Run Text="{Binding ValorUnitario, ConverterCulture=pt-BR, StringFormat=#\,##0.00}"/>
-                                
+
                             </TextBlock>
 
                             <StackPanel Grid.Column="1"
                                     Orientation="Horizontal" Height="25" Margin="0,0,0,5">
-                                
-                                <TextBlock Grid.Column="1">
+
+                                <TextBlock Grid.Column="2">
                                 <Run  Text="{Binding Quantidade}"/>
                                 <Run Text="UN" />
                                 <Run Text="X" />
@@ -119,14 +119,17 @@
 
                                 </TextBlock>
 
-                                <TextBlock Grid.Column="2"
-                                           VerticalAlignment="center"
-                                           Text="{Binding ValorTotalItem, ConverterCulture=pt-BR, StringFormat=#\,##0.00}"/>
 
 
                             </StackPanel>
 
-                           
+                            <TextBlock Grid.Column="3"
+                                           VerticalAlignment="center"
+                                           Text="{Binding ValorTotalItem, ConverterCulture=pt-BR, StringFormat=#\,##0.00}"/>
+
+                            <Border Grid.ColumnSpan="3" Style="{StaticResource BrdSeparadorItens}" />
+
+
 
                         </Grid>
 
@@ -135,7 +138,7 @@
             </ItemsControl>
 
             <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right">
-                <TextBlock Text="{Binding ValorPedido, ConverterCulture=pt-BR, StringFormat=#\,##0.00}" FontSize="25" Margin="0,0,20,0"/>
+                <TextBlock Text="{Binding ValorTotalPedido, ConverterCulture=pt-BR, StringFormat=#\,##0.00}" FontSize="25" Margin="0,0,20,0"/>
 
                 <Button Content="Finalizar Pedido"
                         x:Name="BtnFinalizarPedido" Style="{StaticResource BtnArredondado}" Background="Green"
@@ -146,7 +149,7 @@
 
 
         </Grid>
-        
+
     </Grid>
 
 

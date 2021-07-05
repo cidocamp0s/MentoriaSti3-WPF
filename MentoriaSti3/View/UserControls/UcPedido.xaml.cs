@@ -1,18 +1,10 @@
 ﻿using MentoriaSti3.ViewModel;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Text;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-
+ 
 namespace MentoriaSti3.View.UserControls
 {
     /// <summary>
@@ -38,7 +30,7 @@ namespace MentoriaSti3.View.UserControls
 
         private void BtnAdicionarItem_Click(object sender, RoutedEventArgs e)
         {
-
+            AdicionarItem();
         }
 
         private void BtnFinalizarPedido_Click(object sender, RoutedEventArgs e)
@@ -53,7 +45,7 @@ namespace MentoriaSti3.View.UserControls
             ucPedidoVm.ListaClientes = new ObservableCollection<ClienteViewModel>
             {
                 new ClienteViewModel{Nome="Cliente1"},
-                new ClienteViewModel { Nome = "Cliente1" }
+                new ClienteViewModel { Nome = "Cliente2" }
             };
 
             ucPedidoVm.ListaProdutos = new ObservableCollection<ProdutoViewModel>
@@ -63,7 +55,7 @@ namespace MentoriaSti3.View.UserControls
 
             };
 
-            ucPedidoVm.ListaPagamentos = new  ObservableCollection<String>
+            ucPedidoVm.ListaPagamentos = new ObservableCollection<String>
             {
                 "Dinheiro",
                 "Boleto",
@@ -74,9 +66,26 @@ namespace MentoriaSti3.View.UserControls
             };
 
             ucPedidoVm.Quantidade = 1;
-            ucPedidoVm.ItensAdicionados = new ObservableCollection<UcProdutoViewModel>();
+            ucPedidoVm.ItensAdicionados = new ObservableCollection<UcPedidoItemViewModel>();
 
 
+        }
+
+        private void AdicionarItem()
+        {
+            var produtoSelecionado = cmbProduto.SelectedItem as ProdutoViewModel;
+
+            var itemVm = new UcPedidoItemViewModel
+            {
+                Nome = produtoSelecionado.Nome,
+                Quantidade = ucPedidoVm.Quantidade,
+                ValorUnitario = ucPedidoVm.ValorUnitario,
+                ValorTotalItem = ucPedidoVm.ValorUnitario * ucPedidoVm.Quantidade
+            };
+
+            ucPedidoVm.ItensAdicionados.Add(itemVm);
+
+            ucPedidoVm.ValorTotalPedido = ucPedidoVm.ItensAdicionados.Sum(i=>i.ValorTotalItem);
         }
     }
 }

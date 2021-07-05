@@ -33,7 +33,7 @@
 
             <StackPanel Grid.Column="2">
                 <Label Content="Valor"/>
-                <TextBox  Text="{Binding Valor}"
+                <TextBox   Text="{Binding Valor}"
                           PreviewTextInput="TextBox_PreviewTextInput"/>
             </StackPanel>
 
@@ -70,7 +70,7 @@
                         <TextBlock Text="{Binding Nome}"/>
 
                         <TextBlock Grid.Column="1" Text="{Binding Valor, ConverterCulture=pt-BR, StringFormat=#\,##0.00}"/>
-
+                       
                         <StackPanel Grid.Column="2"
                                     Orientation="Horizontal" Height="25" Margin="0,0,0,5">
 

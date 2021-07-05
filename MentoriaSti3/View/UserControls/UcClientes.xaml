@@ -36,7 +36,7 @@
                     <TextBox Text="{Binding Nome}"/>
                 </StackPanel>
 
-                <StackPanel Grid.Column="3">
+                <StackPanel Grid.Column="2">
                     <Label Content="Data de Nascimento"/>
                     <DatePicker SelectedDate="{Binding DataNascimento}"/>
 
