@@ -4,7 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
- 
+
 namespace MentoriaSti3.View.UserControls
 {
     /// <summary>
@@ -85,7 +85,7 @@ namespace MentoriaSti3.View.UserControls
 
             ucPedidoVm.ItensAdicionados.Add(itemVm);
 
-            ucPedidoVm.ValorTotalPedido = ucPedidoVm.ItensAdicionados.Sum(i=>i.ValorTotalItem);
+            ucPedidoVm.ValorTotalPedido = ucPedidoVm.ItensAdicionados.Sum(i => i.ValorTotalItem);
         }
     }
 }

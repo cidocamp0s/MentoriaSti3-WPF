@@ -88,7 +88,7 @@
                 <RowDefinition Height="60"/>
             </Grid.RowDefinitions>
 
-            <ItemsControl Background="white" BorderBrush="Gray" BorderThickness="1" Margin="10"   ItemsSource="{Binding ItensAdicionados}">
+            <ItemsControl Background="white" BorderBrush="Gray" BorderThickness="1"    ItemsSource="{Binding ItensAdicionados}">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
                         <Grid Margin="5" Height="25">

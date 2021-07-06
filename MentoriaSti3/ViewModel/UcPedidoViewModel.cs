@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Text;
+﻿using System.Collections.ObjectModel;
 
 namespace MentoriaSti3.ViewModel
 {
@@ -38,7 +35,7 @@ namespace MentoriaSti3.ViewModel
             get => _listaPagamentos;
             set
             {
-                _listaPagamentos= value;
+                _listaPagamentos = value;
                 OnPropertyChanged(nameof(ListaPagamentos));
             }
         }
@@ -50,13 +47,13 @@ namespace MentoriaSti3.ViewModel
             get => _itensAdicionados;
             set
             {
-                _itensAdicionados= value;
+                _itensAdicionados = value;
                 OnPropertyChanged(nameof(ItensAdicionados));
             }
         }
 
 
-        private int _quantidade;        
+        private int _quantidade;
         public int Quantidade
         {
             get => _quantidade;

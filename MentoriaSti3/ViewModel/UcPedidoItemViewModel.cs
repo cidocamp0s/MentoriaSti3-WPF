@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace MentoriaSti3.ViewModel
+﻿namespace MentoriaSti3.ViewModel
 {
     public class UcPedidoItemViewModel
     {

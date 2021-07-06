@@ -1,14 +1,14 @@
 ﻿using System;
 
-namespace MentoriaSti3.ViewModel
+namespace MentoriaSti3.Data.Entidades
 {
-    public class ClienteViewModel
+    public class Cliente
     {
+        public long Id { get; set; }
         public string Nome { get; set; }
         public DateTime DataNascimento { get; set; }
-        public int Cep { get; set; }
+        public string Cep { get; set; }
         public string Endereco { get; set; }
         public string Cidade { get; set; }
-
     }
 }

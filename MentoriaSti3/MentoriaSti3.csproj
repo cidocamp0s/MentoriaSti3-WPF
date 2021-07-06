@@ -6,4 +6,8 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\mentoriaSti3.Data\MentoriaSti3.Data.csproj" />
+  </ItemGroup>
+
 </Project>

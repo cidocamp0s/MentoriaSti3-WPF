@@ -1,6 +1,8 @@
-﻿using MentoriaSti3.View.UserControls;
+﻿using MentoriaSti3.Data.Context;
+using MentoriaSti3.View.UserControls;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -21,6 +23,8 @@ namespace MentoriaSti3.View
         public Principal()
         {
             InitializeComponent();
+
+           
         }
 
         private void BtnMenu_Click(object sender, RoutedEventArgs e)
@@ -30,8 +34,8 @@ namespace MentoriaSti3.View
 
 
         private void InicializarUc(object sender)
-        {  
-            if(sender is Button btn)
+        {
+            if (sender is Button btn)
             {
                 switch (btn.Name)
                 {
